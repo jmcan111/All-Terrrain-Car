@@ -200,12 +200,28 @@ void setup()
 
 void loop()
 {
-  digitalWrite (trigPin, LOW);
-  delayMicroseconds (?); 
-  digital Write (trigPin, High);
-  delatyMicroseconds (?);
-  digitalWrite (trigPin, LOW);
-  duration = pulseIn (echoPin, HIGH); 
-  distance = duration/?;
-  if(distance<30)
-    
+   digitalWrite (trigPin, LOW);
+   delayMicroseconds (?); 
+   digital Write (trigPin, High);
+   delatyMicroseconds (?);
+   digitalWrite (trigPin, LOW);
+   duration = pulseIn (echoPin, HIGH); 
+   distance = duration/?;
+   if(distance<30)
+    {
+      digitalWrite(in1, HIGH);
+      digitalWrite(in2, LOW);
+      digitalWrite(in3, LOW);
+      digitalWrite(in4, HIGH);
+      delay(?);
+   }
+
+else
+  {
+    digitalWrite(in1, HIGH);
+    digitalWrite(in2, LOW);
+    digitalWrite(in3, HIGH);
+    digitalWrite(in4, LOW);
+  }
+delay(?);
+}
